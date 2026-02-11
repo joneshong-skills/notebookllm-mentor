@@ -2,6 +2,7 @@
 name: notebookllm-mentor
 description: This skill should be used when the user asks to "use NotebookLM", "create a notebook", "generate audio overview", "NotebookLM 怎麼用", "幫我用 NotebookLM", or discusses Google NotebookLM usage, source management, audio/video overviews, or notebook organization.
 version: 0.1.0
+tools: Read, Edit, WebSearch, Task
 argument-hint: <task or question about NotebookLM>
 ---
 
