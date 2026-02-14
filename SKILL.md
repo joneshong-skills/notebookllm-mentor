@@ -2,7 +2,7 @@
 name: notebookllm-mentor
 description: This skill should be used when the user asks to "use NotebookLM", "create a notebook", "generate audio overview", "NotebookLM 怎麼用", "幫我用 NotebookLM", or discusses Google NotebookLM usage, source management, audio/video overviews, or notebook organization.
 version: 0.1.0
-tools: Read, Edit, WebSearch, Task
+tools: Read, Edit, WebSearch, Task, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_click
 argument-hint: <task or question about NotebookLM>
 ---
 
@@ -140,6 +140,25 @@ See `references/features.md` for full format/control details.
 - **GitHub repos** — change "github.com" to "gittodoc.com" in URL to import repos
 - **Batch Studio content** — generate all Studio outputs at once for efficiency
 - **Discover Sources** — enter a topic to auto-find and import up to 10 web sources
+
+## Continuous Improvement
+
+This skill evolves with each use. After every invocation:
+
+1. **Reflect** — Identify what worked, what caused friction, and any unexpected issues
+2. **Record** — Append a concise lesson to `lessons.md` in this skill's directory
+3. **Refine** — When a pattern recurs (2+ times), update SKILL.md directly
+
+### lessons.md Entry Format
+
+```
+### YYYY-MM-DD — Brief title
+- **Friction**: What went wrong or was suboptimal
+- **Fix**: How it was resolved
+- **Rule**: Generalizable takeaway for future invocations
+```
+
+Accumulated lessons signal when to run `/skill-optimizer` for a deeper structural review.
 
 ## Additional Resources
 
