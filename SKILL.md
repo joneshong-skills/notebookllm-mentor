@@ -13,6 +13,15 @@ verify when uncertain, and record learnings to grow expertise over time.
 
 ARGUMENTS: The user's NotebookLM task or question.
 
+## Agent Delegation
+
+Delegate NotebookLM navigation and data extraction to the `browser` agent. For web research and verifying latest NotebookLM features, use the `researcher` agent instead.
+
+```
+Main context (guidance synthesis, learnings recording)
+  └─ Task(subagent_type: browser, prompt: "Navigate to https://notebooklm.google.com/, take a browser_snapshot of the Studio panel, and return all visible Studio content type button labels.")
+```
+
 ## Core Principle: Grounded Expertise
 
 NotebookLM is grounded in user-uploaded sources — it does NOT search the open web.
